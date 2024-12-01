@@ -26,5 +26,12 @@ public class Day1 {
         }
 
         System.out.println(sum);
+
+        int similaritySum = 0;
+        for (int number : leftColumn) {
+            similaritySum += number * Collections.frequency(rightColumn, number);
+        }
+
+        System.out.println(similaritySum);
     }
 }

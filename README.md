@@ -1,8 +1,7 @@
 # AdventOfCode2024
 My adventofcode.com solutions for 2024 event!
 
-
-[![Day01](https://img.shields.io/badge/Day1-Partly-yellowgreen.svg)](https://i.imgur.com/rolF402.gif)
+[![Day01](https://img.shields.io/badge/Day1-Done-brightgreen.svg)](https://i.imgur.com/rolF402.gif)
 
 [![Day02](https://img.shields.io/badge/Day2-Waiting-lightgrey.svg)](https://i.imgur.com/FuZyZrn.gif)
 
