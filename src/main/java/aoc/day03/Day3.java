@@ -13,15 +13,21 @@ public class Day3 {
         List<String> matches = excludeMultiplicationsFromData(input);
 
         long sum = 0;
+        boolean enabled = true;
         for (String match : matches) {
-            sum += multipleSingleMul(match);
+            if (match.equals("do()"))
+                enabled = true;
+            else if (match.equals("don't()"))
+                enabled = false;
+            else if (enabled)
+                sum += multipleSingleMul(match);
         }
         System.out.println(sum);
     }
 
     private static List<String> excludeMultiplicationsFromData(String inputData) {
         List<String> matches = new ArrayList<>();
-        Pattern pattern = Pattern.compile("(mul\\(\\d+,\\d+\\))?");
+        Pattern pattern = Pattern.compile("(mul\\(\\d+,\\d+\\))|(do\\(\\))|(don't\\(\\))");
         Matcher matcher = pattern.matcher(inputData);
 
         while (matcher.find()) {
