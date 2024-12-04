@@ -22,29 +22,29 @@ public class Day4 {
         System.out.println("Rows back: " + rowsBackwardsCount);
 
         int columnsCount = searches.searchColumns();
-        System.out.println("Columns: "+columnsCount);
+        System.out.println("Columns: " + columnsCount);
 
         int columnsBackwardCount = searches.searchColumnsBackwards();
-        System.out.println("Columns back: "+columnsBackwardCount);
+        System.out.println("Columns back: " + columnsBackwardCount);
 
         List<String> diagonals = searches.searchRightDiagonals();
         int diagonalsRightCount = searches.countWordInList(diagonals);
-        System.out.println("Diagonals right: "+diagonalsRightCount);
+        System.out.println("Diagonals right: " + diagonalsRightCount);
         int diagonalsRightBackwardsCount = searches.countWordBackwardsInList(diagonals);
-        System.out.println("Diagonals right back: "+diagonalsRightBackwardsCount);
+        System.out.println("Diagonals right back: " + diagonalsRightBackwardsCount);
 
         List<String> diagonalsLeft = searches.searchLeftDiagonals();
         int diagonalsLeftCount = searches.countWordInList(diagonalsLeft);
-        System.out.println("Diagonals left: "+diagonalsLeftCount);
+        System.out.println("Diagonals left: " + diagonalsLeftCount);
         int diagonalsLeftBackwardsCount = searches.countWordBackwardsInList(diagonalsLeft);
-        System.out.println("Diagonals left back: "+diagonalsLeftBackwardsCount);
+        System.out.println("Diagonals left back: " + diagonalsLeftBackwardsCount);
 
         totalCount = rowsCount + rowsBackwardsCount + columnsCount + columnsBackwardCount + diagonalsRightCount + diagonalsRightBackwardsCount + diagonalsLeftCount + diagonalsLeftBackwardsCount;
         System.out.println(totalCount);
 
         int totalXCount = 0;
-        for (int i = 0; i < rowCount-2; i++) {
-            for (int j = 0; j < rowLength-2; j++) {
+        for (int i = 0; i < rowCount - 2; i++) {
+            for (int j = 0; j < rowLength - 2; j++) {
                 totalXCount += searches.countXSubArray(i, j);
             }
         }
