@@ -41,6 +41,15 @@ public class Day4 {
 
         totalCount = rowsCount + rowsBackwardsCount + columnsCount + columnsBackwardCount + diagonalsRightCount + diagonalsRightBackwardsCount + diagonalsLeftCount + diagonalsLeftBackwardsCount;
         System.out.println(totalCount);
+
+        int totalXCount = 0;
+        for (int i = 0; i < rowCount-2; i++) {
+            for (int j = 0; j < rowLength-2; j++) {
+                totalXCount += searches.countXSubArray(i, j);
+            }
+        }
+
+        System.out.println(totalXCount);
     }
 
     private static char[][] convertToMatrix(String input) {

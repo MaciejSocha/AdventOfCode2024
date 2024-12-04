@@ -115,4 +115,11 @@ public class MatrixSearch {
         }
         return count;
     }
+
+    public int countXSubArray(int i, int j) {
+        String d1 = String.valueOf(matrix[i][j]) + String.valueOf(matrix[i + 1][j + 1]) + String.valueOf(matrix[i + 2][j + 2]);
+        String d2 = String.valueOf(matrix[i][j + 2]) + String.valueOf(matrix[i + 1][j + 1]) + String.valueOf(matrix[i + 2][j]);
+
+        return ((d1.equals("MAS") || d1.equals("SAM")) && (d2.equals("MAS") || d2.equals("SAM"))) ? 1 : 0;
+    }
 }
